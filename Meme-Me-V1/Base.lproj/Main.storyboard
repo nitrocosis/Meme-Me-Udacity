@@ -36,22 +36,22 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-Z3-y9D">
-                                <rect key="frame" x="0.0" y="54" width="375" height="569"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="549"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ND-TT-ixc">
-                                <rect key="frame" x="37" y="84" width="300" height="22"/>
+                                <rect key="frame" x="37" y="104" width="300" height="22"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiS-ca-RGy">
                                 <rect key="frame" x="37" y="564" width="300" height="22"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWs-GB-LhA">
-                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="eVY-Ai-CRw">
                                         <connections>
@@ -72,7 +72,7 @@
                             <constraint firstItem="G4Y-tS-2cI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AfF-iA-N2I"/>
                             <constraint firstItem="G4Y-tS-2cI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CJY-n2-Yjd"/>
                             <constraint firstItem="dWs-GB-LhA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EWA-bB-IIV"/>
-                            <constraint firstItem="dWs-GB-LhA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-10" id="KoI-dt-5Zb"/>
+                            <constraint firstItem="dWs-GB-LhA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KoI-dt-5Zb"/>
                             <constraint firstItem="QP8-Z3-y9D" firstAttribute="top" secondItem="dWs-GB-LhA" secondAttribute="bottom" id="OmO-UV-UvL"/>
                             <constraint firstItem="QP8-Z3-y9D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SZP-f6-2NI"/>
                             <constraint firstItem="3ND-TT-ixc" firstAttribute="top" secondItem="dWs-GB-LhA" secondAttribute="bottom" constant="30" id="cfo-6V-1Kc"/>

@@ -1,6 +1,6 @@
 //
 //  MemeEditorViewController.swift
-//  MemeMaker
+//  Meme-Me-V1
 //
 //  Created by Sarah Rebecca Estrellado on 1/15/19.
 //  Copyright © 2019 Sarah Rebecca Estrellado. All rights reserved.
@@ -16,12 +16,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
     override func viewDidLoad() {
@@ -63,17 +69,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: buttons
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        present(pickerController, animated: true, completion: nil)
+        pickAnImage(from: .photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .camera
-        present(pickerController, animated: true, completion: nil)
+        pickAnImage(from: .camera)
+        
     }
     
     
@@ -101,8 +102,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height + 250
+            if bottomTextField.isFirstResponder {
+                self.view.frame.origin.y = keyboardSize.height * (-1)
             }
         }
     }
@@ -156,17 +157,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         toolBarsVisibility(toggle: false)
         return memedImage
     }
-    
-    struct Meme {
-        
-        var top = ""
-        var bottom = ""
-        var image = UIImage()
-        var memedImage = UIImage()
-        
-        
-    }
-    
+
     func save(memedImage: UIImage) {
         let meme = Meme(top: topTextField.text!, bottom: bottomTextField.text!, image: imagePickerView.image!, memedImage: memedImage )
     }
@@ -175,6 +166,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private func toolBarsVisibility(toggle: Bool) {
         navBar.isHidden = toggle
         toolBar.isHidden = toggle
+    }
+    
+    func pickAnImage(from source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
 }
 
