@@ -1,5 +1,5 @@
 //
-//  MemeDetailView.swift
+//  MemeDetailViewController.swift
 //  Meme-Me-V1
 //
 //  Created by Sarah Rebecca Estrellado on 2/28/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
- class MemeDetailView: UIViewController {
+ class MemeDetailViewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
     var meme: Meme!

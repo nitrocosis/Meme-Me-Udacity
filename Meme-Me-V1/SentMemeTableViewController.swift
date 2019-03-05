@@ -48,7 +48,7 @@ import UIKit
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = storyboard!.instantiateViewController(withIdentifier: "MemeDetailView") as! MemeDetailView
+        let controller = storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.meme = self.memes[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
     }

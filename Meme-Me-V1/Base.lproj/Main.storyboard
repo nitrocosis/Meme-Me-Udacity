@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="CLX-24-mbz" customClass="MemeTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MemeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="CLX-24-mbz" customClass="MemeTableViewCell" customModule="Meme_Me_V1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLX-24-mbz" id="HlC-Vc-kW9">
@@ -75,9 +75,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="Mrj-Ja-v4T" id="e8G-Qk-Bwd"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufz-xW-yBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +129,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="MemeCollectionViewCell" id="ybo-2o-GMq" customClass="MemeCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="MemeCollectionViewCell" id="ybo-2o-GMq" customClass="MemeCollectionViewCell" customModule="Meme_Me_V1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="117" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -170,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="-754.39999999999998" y="-582.45877061469275"/>
         </scene>
-        <!--Meme Detail View-->
+        <!--Meme Detail View Controller-->
         <scene sceneID="TC0-fT-81H">
             <objects>
-                <viewController id="HIA-qZ-opi" customClass="MemeDetailView" customModule="Meme_Me_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="HIA-qZ-opi" customClass="MemeDetailViewController" customModule="Meme_Me_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y6c-3L-ypE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,6 +293,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FZK-10-w1Z"/>
+        <segue reference="LYb-QF-gAR"/>
     </inferredMetricsTieBreakers>
 </document>

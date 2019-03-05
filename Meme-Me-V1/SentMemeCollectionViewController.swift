@@ -51,7 +51,7 @@ class SentMemeCollectionViewController: UICollectionViewController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailView") as! MemeDetailView
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.meme = self.memes[indexPath.item]
         self.navigationController!.pushViewController(controller, animated: true)
     }
