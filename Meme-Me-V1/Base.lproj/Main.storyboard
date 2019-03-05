@@ -31,13 +31,13 @@
         <!--Sent Meme Table View Controller-->
         <scene sceneID="XZ8-8c-zQj">
             <objects>
-                <tableViewController id="FiW-tn-gPO" customClass="SentMemeTableViewController" sceneMemberID="viewController">
+                <tableViewController id="FiW-tn-gPO" customClass="SentMemeTableViewController" customModule="Meme_Me_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mrj-Ja-v4T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" id="CLX-24-mbz" customClass="MemeTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="CLX-24-mbz" customClass="MemeTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLX-24-mbz" id="HlC-Vc-kW9">
@@ -76,18 +76,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Mrj-Ja-v4T" id="FIC-tf-K96"/>
+                        <outlet property="tableView" destination="Mrj-Ja-v4T" id="e8G-Qk-Bwd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufz-xW-yBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674.39999999999998" y="144.3778110944528"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="BZ4-pU-wSP">
             <objects>
                 <navigationController id="nHl-bE-4vI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vwU-9d-rJF"/>
+                    <tabBarItem key="tabBarItem" title="Table" id="vwU-9d-rJF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SCA-Vl-TSw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -100,11 +100,11 @@
             </objects>
             <point key="canvasLocation" x="-1514" y="145"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="ROC-Qb-zfd">
             <objects>
                 <navigationController id="jSG-f3-Oa2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="I4c-va-PhV"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="I4c-va-PhV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tCd-FE-AG9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -120,7 +120,7 @@
         <!--Sent Meme Collection View Controller-->
         <scene sceneID="4oO-ab-YP7">
             <objects>
-                <collectionViewController id="C3j-WQ-UCD" customClass="SentMemeCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="C3j-WQ-UCD" customClass="SentMemeCollectionViewController" customModule="Meme_Me_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9jj-DC-NRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="ybo-2o-GMq" customClass="MemeCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="MemeCollectionViewCell" id="ybo-2o-GMq" customClass="MemeCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="117" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -162,6 +162,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="m3g-rp-1sp" id="otN-8J-Izs"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oy2-Jh-hfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +296,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LYb-QF-gAR"/>
+        <segue reference="FZK-10-w1Z"/>
     </inferredMetricsTieBreakers>
 </document>

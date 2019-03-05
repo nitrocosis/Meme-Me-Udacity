@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-public class CollectionViewController: UICollectionViewController {
+class SentMemeCollectionViewController: UICollectionViewController {
     var memes: [Meme]! 
 
-  //  @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
     public override func viewDidLoad() {
@@ -20,12 +20,12 @@ public class CollectionViewController: UICollectionViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
        memes = appDelegate.memes
         
-       // let space:CGFloat = 3.0
-        //let dimension = (view.frame.size.width - (2 * space)) / 3.0
+       let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
-       // flowLayout.minimumInteritemSpacing = space
-        //flowLayout.minimumLineSpacing = space
-        // flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+       flowLayout.minimumInteritemSpacing = space
+       flowLayout.minimumLineSpacing = space
+       flowLayout.itemSize = CGSize(width: dimension, height: dimension)
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,7 @@ public class CollectionViewController: UICollectionViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
-        collectionView?.reloadData()
+        collectionView.reloadData()
     }
     
     
@@ -43,7 +43,7 @@ public class CollectionViewController: UICollectionViewController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! MemeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
         let meme = memes[indexPath.item]
         cell.CollectionViewImageView.image = meme.memedImage
         

@@ -21,7 +21,7 @@ import UIKit
  
  */
 
- class TableViewController: UITableViewController {
+ class SentMemeTableViewController: UITableViewController {
     
     var memes: [Meme]! {
         return (UIApplication.shared.delegate as! AppDelegate).memes
@@ -32,14 +32,12 @@ import UIKit
         tableView.reloadData()
     }
     
-
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableCell", for: indexPath) as! MemeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for: indexPath) as! MemeTableViewCell
         let meme = memes[indexPath.row]
         cell.imageView!.image = meme.memedImage
         return cell
