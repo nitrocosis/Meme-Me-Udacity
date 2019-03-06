@@ -40,6 +40,7 @@ import UIKit
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for: indexPath) as! MemeTableViewCell
         let meme = memes[indexPath.row]
         cell.imageView!.image = meme.memedImage
+        cell.tableViewLabel.text = "\(meme.top) \(meme.bottom)"
         return cell
     }
     
