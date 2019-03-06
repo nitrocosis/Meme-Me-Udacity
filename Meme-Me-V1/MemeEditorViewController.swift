@@ -91,12 +91,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    //returns to rootview 
+    //returns to rootview
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         /*topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
-        imagePickerView.image = nil
-        shareButton.isEnabled = false */
+         bottomTextField.text = "BOTTOM"
+         imagePickerView.image = nil
+         shareButton.isEnabled = false */
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true);
     }
@@ -163,7 +163,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         toolBarsVisibility(toggle: false)
         return memedImage
     }
-
+    
     func save(memedImage: UIImage) {
         //creates the meme
         let meme = Meme(top: topTextField.text!, bottom: bottomTextField.text!, image: imagePickerView.image!, memedImage: memedImage )
@@ -185,6 +185,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(pickerController, animated: true, completion: nil)
     }
 }
+
 
 
 

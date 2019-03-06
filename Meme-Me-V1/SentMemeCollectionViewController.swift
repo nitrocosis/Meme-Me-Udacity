@@ -10,22 +10,22 @@ import Foundation
 import UIKit
 
 class SentMemeCollectionViewController: UICollectionViewController {
-    var memes: [Meme]! 
-
+    var memes: [Meme]!
+    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-       memes = appDelegate.memes
+        memes = appDelegate.memes
         
-       let space:CGFloat = 3.0
+        let space:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
-       flowLayout.minimumInteritemSpacing = space
-       flowLayout.minimumLineSpacing = space
-       flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -56,3 +56,4 @@ class SentMemeCollectionViewController: UICollectionViewController {
         self.navigationController!.pushViewController(controller, animated: true)
     }
 }
+

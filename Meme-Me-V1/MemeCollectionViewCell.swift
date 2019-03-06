@@ -13,3 +13,4 @@ class MemeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var CollectionViewImageView: UIImageView!
 }
+

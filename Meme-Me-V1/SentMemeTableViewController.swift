@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
- class SentMemeTableViewController: UITableViewController {
+class SentMemeTableViewController: UITableViewController {
     
     var memes: [Meme]! {
         return (UIApplication.shared.delegate as! AppDelegate).memes
@@ -21,7 +21,7 @@ import UIKit
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return memes.count
+        return memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,3 +44,4 @@ import UIKit
     
     
 }
+

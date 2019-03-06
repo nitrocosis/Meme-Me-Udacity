@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
- class MemeDetailViewController: UIViewController {
+class MemeDetailViewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
     var meme: Meme!
@@ -19,3 +19,4 @@ import UIKit
         detailImageView.image = meme.memedImage
     }
 }
+
