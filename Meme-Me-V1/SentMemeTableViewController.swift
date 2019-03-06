@@ -9,18 +9,6 @@
 import Foundation
 import UIKit
 
-/* TODO
- 1) Set up storyboard
- 2) Set up TableViewController
- 3) Set up CollectionViewController
- 4) Set up Flow
- 5) Fix bar button issues on editor view
- 6) Fix bug where date doesn't show up
- 7) Fix flow bug
- 
- 
- */
-
  class SentMemeTableViewController: UITableViewController {
     
     var memes: [Meme]! {
